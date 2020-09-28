@@ -39,9 +39,6 @@ exports.login = (req, res, next) => {
       if (!user) {
         throw new ErrorHandler(401, 'User not found!')
       }
-      if (user.rol !== 'admin') {
-        throw new ErrorHandler(403, 'Sorry, you are not allowed')
-      }
       bcrypt
         .compare(req.body.password, user.password)
         .then((valid) => {
