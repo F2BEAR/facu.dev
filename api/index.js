@@ -10,6 +10,7 @@ const authRoutes = require('./routes/auth')
 const { handleError, ErrorHandler } = require('./middlewares/Error')
 
 const bodyParser = require('body-parser')
+var cors = require('cors')
 
 const port = process.env.PORT || 4005
 require('./db/dbConnection')
@@ -25,6 +26,8 @@ app.use(
     extended: true
   })
 )
+
+app.use(cors())
 
 app.use('/', routes)
 app.use('/auth', authRoutes)

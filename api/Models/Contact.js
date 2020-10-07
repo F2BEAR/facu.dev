@@ -4,11 +4,12 @@ const uniqueValidator = require('mongoose-unique-validator')
 
 const Contact = new Schema({
   title: { type: String, required: true },
-  list: {
-    Linkedin: { type: String, required: true },
-    Email: { type: String, required: true },
-    GitHub: { type: String, required: true }
-  }
+  list: [
+    { 
+      name: {type: String, required: true },
+      url: {type: String, required: true }
+    }
+  ]
 })
 
 Contact.plugin(uniqueValidator)

@@ -1,14 +1,13 @@
-import React from 'react';
+import React from 'react'
 
 class Footer extends React.Component {
-  
-  render() {
+  render () {
     return (
-      <div>
-        <p>Made with Love by Facundo Carbonel | All Rights Reserved</p> 
+      <div className='w-full flex justify-center bg-primary items-center min-h-layout'>
+        <p>Facundo Carbonel | All Rights Reserved</p>
       </div>
     )
   }
 }
 
-export default Footer;
+export default Footer

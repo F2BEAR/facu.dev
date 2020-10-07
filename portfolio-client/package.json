@@ -11,12 +11,14 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "shortid": "^2.2.15"
   },
   "scripts": {
     "start": "npm run watch:css && react-scripts start",
     "build": "npm run build:css && react-scripts build",
-    "test": "react-scripts test",
+    "test": "standard && react-scripts test",
+    "fix": "npx standard --fix",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/Styles/tailwind.css -o src/Styles/main.css",
     "build:style": "tailwind build src/Styles/tailwind.css -o src/Styles/main.css"
@@ -40,6 +42,7 @@
     "autoprefixer": "^10.0.1",
     "postcss": "^8.1.1",
     "postcss-cli": "^8.0.0",
+    "standard": "^14.3.4",
     "tailwindcss": "^1.8.10"
   }
 }
