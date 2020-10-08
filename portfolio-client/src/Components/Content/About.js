@@ -14,7 +14,7 @@ class About extends React.Component {
   componentDidMount () {
     const config = {
       method: 'get',
-      baseURL: 'http://localhost:666',
+      baseURL: 'https://api.facu.dev/',
       headers: { Accept: '*/*' }
     }
 

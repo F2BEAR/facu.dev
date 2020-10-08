@@ -13,7 +13,7 @@ class Contact extends React.Component {
   componentDidMount () {
     const config = {
       method: 'get',
-      url: 'http://localhost:666/contact',
+      url: 'https://api.facu.dev/contact',
       headers: { Accept: '*/*' }
     }
 
