@@ -6,8 +6,13 @@ class Contact extends React.Component {
     super(props)
     this.state = {
       data: {},
-      list: []
+      list: [],
+      name: '',
+      email: '',
+      message: ''
     }
+    this.handleOnChange = this.handleOnChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   componentDidMount () {
@@ -32,6 +37,28 @@ class Contact extends React.Component {
       })
   }
 
+  handleOnChange = (e) => {
+    this.setState({ [e.target.name] : e.target.value })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    
+    const { name, email, message} = this.state
+
+    const config = {
+      method: 'post',
+      url: 'https://api.facu.dev/sendMail',
+      headers: { Accept: '*/*' },
+      data: {
+        'name': name,            
+        'email': email,
+        'message': message
+      }
+    }
+    axios(config)
+  }
+
   render () {
     return (
       <div className='w-full flex justify-center bg-primary items-center px-3 flex-col text-center'>
@@ -46,6 +73,7 @@ class Contact extends React.Component {
         <form
           id='contact'
           className='mt-3 rounded-lg bg-secondary p-8 felx justify-end w-full sm:max-w-2xl sm:min-w-xl'
+          onSubmit={this.handleSubmit}
         >
           <div className='m-3 flex justify-between'>
             <label htmlFor='name' className='m-3'>
@@ -56,6 +84,7 @@ class Contact extends React.Component {
               type='text'
               className='rounded-lg p-3 w-48 sm:min-w-sm bg-primary'
               placeholder='Your Name'
+              onChange={this.handleOnChange}
               required
             />
           </div>
@@ -64,10 +93,11 @@ class Contact extends React.Component {
               Email
             </label>
             <input
-              name='mail'
+              name='email'
               type='email'
               className='rounded-lg p-3 w-48 sm:min-w-sm bg-primary'
               placeholder='example@example.com'
+              onChange={this.handleOnChange}
               required
             />
           </div>
@@ -82,6 +112,7 @@ class Contact extends React.Component {
               form='contact'
               className='rounded-lg p-3 w-48 sm:min-w-sm bg-primary'
               placeholder='Enter your message here!'
+              onChange={this.handleOnChange}
               required
             />
           </div>
