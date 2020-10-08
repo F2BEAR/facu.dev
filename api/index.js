@@ -12,12 +12,12 @@ const { handleError, ErrorHandler } = require('./middlewares/Error')
 const bodyParser = require('body-parser')
 var cors = require('cors')
 
-const port = process.env.PORT || 4005
+const port = process.env.PORT
 require('./db/dbConnection')
 
 app.listen(port, () => {
   console.log(`Express escuchando en el puerto ${port}`)
-  console.log(`http://localhost:${port}`)
+  console.log(`https://api.facu.dev`)
 })
 
 app.use(bodyParser.json(), bodyParser.text())
