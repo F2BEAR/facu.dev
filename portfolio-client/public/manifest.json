@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Facu.Dev",
+  "name": "Facundo Carbonel | Web Dev",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://facu.dev",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#2d3748"
 }
