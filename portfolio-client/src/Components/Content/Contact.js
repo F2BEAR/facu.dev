@@ -34,7 +34,7 @@ class Contact extends React.Component {
 
   render () {
     return (
-      <div className='w-full flex justify-center items-center px-3 flex-col text-center'>
+      <div className='w-full flex justify-center bg-primary items-center px-3 flex-col text-center'>
         <p className='font-bold text-xl mb-3'>Contact</p>
         <p className='max-w-xl text-justify m-3'>
           If you want to contact me for more information, project proposals or

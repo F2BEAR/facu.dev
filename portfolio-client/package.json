@@ -80,9 +80,13 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "dead",
+      "cover 99.5%", 
+      "last 2 versions", 
+      "Firefox > 70",
+      "Edge > 80",
+      "Chrome > 65",
+      "supports es6-module"
     ],
     "development": [
       "last 1 chrome version",
