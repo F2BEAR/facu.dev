@@ -41,8 +41,7 @@ class Contact extends React.Component {
     this.setState({ [e.target.name] : e.target.value })
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
+  handleSubmit() {
     
     const { name, email, message} = this.state
 

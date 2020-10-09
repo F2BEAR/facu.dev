@@ -61,7 +61,7 @@ class GitRepos extends React.Component {
                 </span>
                 <p className='font-bold text-xl'>{item.name}</p>
                 <p>{item.description}</p>
-                <p>Language:{item.language}</p>
+                {item.language ? <p>Language: {item.language}</p> : <p></p>}
                 <p className='text-accent text-sm'>{item.html_url}</p>
               </a>
             </li>
