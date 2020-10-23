@@ -17,15 +17,15 @@ class App extends React.Component {
   render () {
     return (
       <ThemeProvider>
-        <div className='h-screen m-0 p-0 flex flex-col justify-between bg-primary text-primary'>
+        <div className='h-screen w-screen m-0 p-0 flex flex-col justify-between bg-primary text-primary'>
           <div>
             <BrowserRouter>
               <Header />
               <div className='mt-24'>
                 <Switch>
                   <Route exact path='/' component={Home} />
-                  <Route path='/contact' component={Contact} className='content' />
-                  <Route path='/about' component={About} className='content' />
+                  <Route path='/contact' component={Contact} />
+                  <Route path='/about' component={About} />
                   <Route path='/projects' component={GitRepos} />
                   <Route component={NoMatch} className='content' />
                 </Switch>

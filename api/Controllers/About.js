@@ -8,12 +8,15 @@ exports.createAbout = (req, res, next) => {
         throw new ErrorHandler(409, 'There is About Info already added!')
       } else {
         const newAbout = new About()
-        newAbout.Me.title = req.body.About.Me.title
-        newAbout.Me.texts = req.body.About.Me.texts
-        newAbout.Me.listTitle = req.body.About.Me.listTitle
-        newAbout.Me.list = req.body.About.Me.list
-        newAbout.Academic.title = req.body.About.Academic.title
-        newAbout.Academic.texts = req.body.About.Academic.texts
+        const reqData = req.body.About
+        newAbout.Me.title = reqData.Me.title
+        newAbout.Me.texts = reqData.Me.texts
+        newAbout.Me.listTitle = reqData.Me.listTitle
+        newAbout.Me.list = reqData.Me.list
+        newAbout.Academic.title = reqData.Academic.title
+        newAbout.Academic.texts = reqData.Academic.texts
+        newAbout.ThisPage.title = reqData.ThisPage.title
+        newAbout.ThisPage.texts = reqData.ThisPage.texts
         newAbout.save((err, data) => {
           if (err) {
             throw new ErrorHandler(500, err)

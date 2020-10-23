@@ -3,11 +3,14 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  purge: [
-    './src/**/*.jsx',
-    './src/**/*.js',
-    './public/index.html'
-  ],
+  purge: {
+    enabled: true,
+    content: [
+      './src/**/*.jsx',
+      './src/**/*.js',
+      './public/index.html'
+    ]
+  },
   target: 'relaxed',
   prefix: '',
   important: false,
@@ -275,7 +278,6 @@ module.exports = {
         '"Helvetica Neue"',
         'Arial',
         '"Noto Sans"',
-        'Noto Sans KR',
         'sans-serif',
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',

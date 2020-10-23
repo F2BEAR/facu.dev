@@ -19,7 +19,7 @@ class Header extends React.Component {
 
   render () {
     return (
-      <div className='w-full flex fixed bg-primary sm:jutify-around sm:items-center md:justify-around justify-between min-h-layout shadow-lg'>
+      <div className='w-screen flex fixed bg-primary sm:jutify-around sm:items-center md:justify-around justify-between min-h-layout shadow-lg'>
         <h1 className='p-3 font-bold text-4x1 mt-2 sm:mt-0'>
           Facundo Carbonel
         </h1>

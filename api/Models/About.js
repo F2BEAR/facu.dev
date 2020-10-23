@@ -12,6 +12,10 @@ const About = new Schema({
   Academic: {
     title: { type: String, required: true },
     texts: [{ type: String, required: true }]
+  },
+  ThisPage: {
+    title: {type: String, required: true},
+    texts: [{type: String, required: true}]
   }
 })
 
