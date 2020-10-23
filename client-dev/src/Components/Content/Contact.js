@@ -54,7 +54,7 @@ class Contact extends React.Component {
 
     const config = {
       method: "post",
-      url: "http://localhost:666/sendMail",
+      url: "https://api.facu.dev/sendMail",
       headers: { Accept: "*/*" },
       data: {
         name: name,
@@ -88,15 +88,13 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="w-full">
-        {this.state.messageSent === true ? 
-          (
-
-            <span className="absolute bg-secondary rounded-lg shadow-lg w-64 p-6 text-accent ml-24">
-              {this.state.alert}
-            </span>
-          ) : (
-            <span className="hidden"></span>
-        )}
+        
+        <div className={'transition-all sm:transition-none duration-300 ease-in-out w-screen h-screen flex justify-center items-center' + 
+        (this.state.messageSent ? 'left-0' : '-left-64')}>
+          <span className={"bg-secondary rounded-lg shadow-lg w-64 p-6 text-accent"}>
+            {this.state.alert}
+          </span>
+        </div>
 
         {this.state.isLoading === true ? (
           <Spinner />
@@ -123,7 +121,7 @@ class Contact extends React.Component {
                   name="name"
                   type="text"
                   className="rounded-lg p-3 w-48 sm:min-w-sm bg-primary focus:bg-primary"
-                  autocomplete="off"
+                  autoComplete="off"
                   placeholder="Your Name"
                   value={this.state.name}
                   onChange={this.handleOnChange}
@@ -138,7 +136,7 @@ class Contact extends React.Component {
                   name="email"
                   type="email"
                   className="rounded-lg p-3 w-48 sm:min-w-sm bg-primary focus:bg-primary"
-                  autocomplete="off"
+                  autoComplete="off"
                   placeholder="example@example.com"
                   value={this.state.email}
                   onChange={this.handleOnChange}
