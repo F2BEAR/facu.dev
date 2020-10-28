@@ -89,9 +89,9 @@ class Contact extends React.Component {
     return (
       <div className="w-full">
         
-        <div className={'transition-all sm:transition-none duration-300 ease-in-out w-screen h-screen flex justify-center items-center' + 
-        (this.state.messageSent ? 'left-0' : '-left-64')}>
-          <span className={"bg-secondary rounded-lg shadow-lg w-64 p-6 text-accent"}>
+        <div className={'content w-screen flex justify-center items-center absolute ' + 
+        (this.state.messageSent ? 'visible' : 'hidden')}>
+          <span className={'bg-tertiary rounded-lg shadow-lg w-64 p-6 text-accent'}>
             {this.state.alert}
           </span>
         </div>

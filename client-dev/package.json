@@ -81,8 +81,8 @@
   "browserslist": {
     "production": [
       "dead",
-      "cover 99.5%", 
-      "last 2 versions", 
+      "cover 99.5%",
+      "last 2 versions",
       "Firefox > 70",
       "Edge > 80",
       "Chrome > 65",
@@ -96,6 +96,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
+    "inspectpack": "^4.5.2",
     "postcss": "^8.1.1",
     "postcss-cli": "^8.0.0",
     "standard": "^14.3.4",

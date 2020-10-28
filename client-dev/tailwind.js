@@ -4,11 +4,13 @@ module.exports = {
     purgeLayersByDefault: true
   },
   purge: {
+    enabled: true,
     content: [
       './src/**/*.jsx',
       './src/**/*.js',
       './public/index.html'
-    ]
+    ],
+    css: ['./src/Styles/*.css']
   },
   target: 'relaxed',
   prefix: '',
