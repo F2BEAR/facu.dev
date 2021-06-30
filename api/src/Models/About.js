@@ -14,8 +14,8 @@ const About = new Schema({
     texts: [{ type: String, required: true }]
   },
   ThisPage: {
-    title: {type: String, required: true},
-    texts: [{type: String, required: true}]
+    title: { type: String },
+    texts: [{ type: String }]
   }
 })
 

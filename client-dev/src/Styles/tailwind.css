@@ -8,7 +8,7 @@ body {
 .dark {
   --color-bg-primary: #2d3748;
   --color-bg-secondary: #283141;
-  --color-bg-tertiary: #37505E;
+  --color-bg-tertiary: #37505e;
   --color-text-primary: #f7fafc;
   --color-text-secondary: #e2e8f0;
   --color-text-accent: #81e6d9;
@@ -17,10 +17,10 @@ body {
 .light {
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #edf2f7;
-  --color-bg-tertiary: #EBFAF5;
+  --color-bg-tertiary: #ebfaf5;
   --color-text-primary: #2d3748;
   --color-text-secondary: #4a5568;
-  --color-text-accent: #4299E1;
+  --color-text-accent: #4299e1;
 }
 
 @tailwind base;
@@ -32,5 +32,5 @@ body {
 @tailwind screens;
 
 .content {
-  height: calc(100vh - (theme("minHeight.layout") * 4));
+  height: calc(100vh - (theme('minHeight.layout') * 4));
 }

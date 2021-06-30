@@ -1,7 +1,7 @@
-import React from "react"
-import axios from "axios"
-import shortid from "shortid"
-import Spinner from "../Spinner"
+import React from 'react'
+import axios from 'axios'
+import shortid from 'shortid'
+import Spinner from '../Spinner'
 
 class Home extends React.Component {
   constructor(props) {
@@ -9,9 +9,9 @@ class Home extends React.Component {
     this.state = {
       usefulList: [],
       me: [],
-      listTitle: "",
+      listTitle: '',
       list: [],
-      isLoading: false,
+      isLoading: false
     }
   }
 
@@ -19,12 +19,12 @@ class Home extends React.Component {
     this.setState(() => ({ isLoading: true }))
 
     const config = {
-      method: "get",
-      baseURL: "https://api.facu.dev/",
-      headers: { Accept: "*/*" },
+      method: 'get',
+      baseURL: 'http://localhost:666/',
+      headers: { Accept: '*/*' }
     }
 
-    axios("about", config)
+    axios('about', config)
       .then((response) => {
         const resMe = response.data.about[0].Me.texts
         const resListTitle = response.data.about[0].Me.listTitle
@@ -33,24 +33,24 @@ class Home extends React.Component {
         this.setState(() => ({
           me: resMe,
           listTitle: resListTitle,
-          list: resList,
+          list: resList
         }))
       })
       .catch((error) => {
         console.log(error)
       })
 
-    axios("knowledge", config)
+    axios('knowledge', config)
       .then((response) => {
         const resData = response.data.knowledge[0]
         const resUsefulList = resData.Useful.list
         this.setState(() => ({
           usefulList: resUsefulList,
-          isLoading: false 
+          isLoading: false
         }))
       })
       .catch((error) => {
-        console.error(error);
+        console.error(error)
       })
   }
 
@@ -60,45 +60,45 @@ class Home extends React.Component {
         {this.state.isLoading === true ? (
           <Spinner />
         ) : (
-            <div className="text-justify flex items-center flex-col">
-              {this.state.me.map((item) => {
+          <div className="text-justify flex items-center flex-col">
+            {this.state.me.map((item) => {
+              return (
+                <p
+                  className="w-64 sm:min-w-2xl my-3 mx-6"
+                  key={shortid.generate()}
+                >
+                  {item}
+                </p>
+              )
+            })}
+            <p className="my-3 mx-6 w-64 sm:min-w-2xl">
+              {this.state.listTitle}
+            </p>
+            <ul className="rounded-lg bg-secondary p-6 w-64 sm:max-w-2xl sm:min-w-2xl text-justify">
+              {this.state.list.map((item) => {
                 return (
-                  <p
-                    className="w-64 sm:min-w-2xl my-3 mx-6"
-                    key={shortid.generate()}
-                  >
-                    {item}
-                  </p>
+                  <li key={item.toString()} className="my-3 w-auto sm:w-64">
+                    {String.fromCharCode('9642') + ' ' + item}
+                  </li>
                 )
               })}
-              <p className="my-3 mx-6 w-64 sm:min-w-2xl">
-                {this.state.listTitle}
-              </p>
-              <ul className="rounded-lg bg-secondary p-6 w-64 sm:max-w-2xl sm:min-w-2xl text-justify">
-                {this.state.list.map((item) => {
-                  return (
-                    <li key={item.toString()} className="my-3 w-auto sm:w-64">
-                      {String.fromCharCode("9642") + " " + item}
-                    </li>
-                  )
-                })}
-              </ul>
-              <p className="text-md my-3 mx-6 w-64 sm:min-w-2xl">
-                Useful knowledge:
-              </p>
-              <ul className="rounded-lg bg-secondary p-6 mb-6 w-64 sm:max-w-2xl sm:min-w-2xl text-justify">
-                {this.state.usefulList.map((items) => {
-                  return (
-                    <li
-                      key={items.toString()}
-                      className="text-justify w-auto sm:w-64 block sm:inline-block m-3"
-                    >
-                      {String.fromCharCode("9642") + " " + items}
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
+            </ul>
+            <p className="text-md my-3 mx-6 w-64 sm:min-w-2xl">
+              Useful knowledge:
+            </p>
+            <ul className="rounded-lg bg-secondary p-6 mb-6 w-64 sm:max-w-2xl sm:min-w-2xl text-justify">
+              {this.state.usefulList.map((items) => {
+                return (
+                  <li
+                    key={items.toString()}
+                    className="text-justify w-auto sm:w-64 block sm:inline-block m-3"
+                  >
+                    {String.fromCharCode('9642') + ' ' + items}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
         )}
       </div>
     )

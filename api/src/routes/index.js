@@ -1,9 +1,9 @@
 const routes = require('express').Router()
-const contactCtrl = require('../Controllers/Contact')
-const aboutCtrl = require('../Controllers/About')
-const knowledgeCtrl = require('../Controllers/Knowledge')
+const contactCtrl = require('../controllers/Contact')
+const aboutCtrl = require('../controllers/About')
+const knowledgeCtrl = require('../controllers/Knowledge')
 
-const mail = require('../Mail/Mail')
+const mail = require('../mail/Mail')
 
 routes.get('/', (req, res) => {
   console.log('Someone is watching')

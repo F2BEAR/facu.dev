@@ -51,6 +51,7 @@ exports.login = (req, res, next) => {
           })
           res.status(200).json({
             userId: user._id,
+            rol: user.rol,
             token: token
           })
         })
@@ -61,8 +62,4 @@ exports.login = (req, res, next) => {
     .catch((error) => {
       next(error)
     })
-}
-
-exports.private = (req, res, next) => {
-  res.send('done')
 }

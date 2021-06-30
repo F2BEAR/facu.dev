@@ -1,6 +1,6 @@
-import React from "react"
-import axios from "axios"
-import Spinner from "../Spinner"
+import React from 'react'
+import axios from 'axios'
+import Spinner from '../Spinner'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -8,9 +8,9 @@ class Contact extends React.Component {
     this.state = {
       data: {},
       list: [],
-      name: "",
-      email: "",
-      message: "",
+      name: '',
+      email: '',
+      message: '',
       isLoading: false,
       messageSent: false,
       alert: ''
@@ -23,9 +23,9 @@ class Contact extends React.Component {
     this.setState(() => ({ isLoading: true }))
 
     const config = {
-      method: "get",
-      url: "https://api.facu.dev/contact",
-      headers: { Accept: "*/*" },
+      method: 'get',
+      url: 'http://localhost:666/contact',
+      headers: { Accept: '*/*' }
     }
 
     axios(config)
@@ -53,14 +53,14 @@ class Contact extends React.Component {
     const { name, email, message } = this.state
 
     const config = {
-      method: "post",
-      url: "https://api.facu.dev/sendMail",
-      headers: { Accept: "*/*" },
+      method: 'post',
+      url: 'https://api.facu.dev/sendMail',
+      headers: { Accept: '*/*' },
       data: {
         name: name,
         email: email,
-        message: message,
-      },
+        message: message
+      }
     }
     axios(config).then((res) => {
       this.setState({ messageSent: true })
@@ -68,7 +68,9 @@ class Contact extends React.Component {
       if (res.status === 200) {
         this.setState({ alert: 'The message has been sent! :)' })
       } else {
-        this.setState({ alert: 'There was an error while sending the message :(' })
+        this.setState({
+          alert: 'There was an error while sending the message :('
+        })
       }
 
       this.setState({
@@ -78,7 +80,7 @@ class Contact extends React.Component {
       })
 
       setInterval(() => {
-        this.setState({ 
+        this.setState({
           messageSent: false
         })
       }, 3500)
@@ -88,10 +90,15 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="w-full">
-        
-        <div className={'content w-screen flex justify-center items-center absolute ' + 
-        (this.state.messageSent ? 'visible' : 'hidden')}>
-          <span className={'bg-tertiary rounded-lg shadow-lg w-64 p-6 text-accent'}>
+        <div
+          className={
+            'content w-screen flex justify-center items-center absolute ' +
+            (this.state.messageSent ? 'visible' : 'hidden')
+          }
+        >
+          <span
+            className={'bg-tertiary rounded-lg shadow-lg w-64 p-6 text-accent'}
+          >
             {this.state.alert}
           </span>
         </div>
@@ -103,7 +110,7 @@ class Contact extends React.Component {
             <p className="font-bold text-xl mb-3">Contact</p>
             <p className="max-w-xl text-justify m-3">
               If you want to contact me for more information, project proposals
-              or any other inquiry feel free to fill the below form{" "}
+              or any other inquiry feel free to fill the below form{' '}
               <span role="img" aria-labelledby="sparkle emoji">
                 ✨
               </span>
