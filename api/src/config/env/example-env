@@ -1,8 +1,0 @@
-PORT=
-MONGOPORT=
-MONGOURI=
-MONGODB=
-TOKENSECRET=
-URL=
-
-Para que esto funcione modifica el nombre de este archivo por un NODE_ENV valido seguido de .env; por ejemplo production.env o development.env

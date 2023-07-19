@@ -1,0 +1,33 @@
+:root {
+	background-size: 60px 60px;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 224, 255, 0.19) 1px,
+		transparent 1px
+	),
+	linear-gradient(to bottom, rgba(0, 224, 255, 0.19) 1px, transparent 1px);
+	background-color: #0f0f23;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; 
+	-webkit-text-size-adjust: 100%; 
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background: #0f0f23;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #00e1ffd3;
+	border-radius: 5rem; 
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
