@@ -24,6 +24,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://facu.dev/"),
 	title: 'Facundo Carbonel | Web Development',
 	description: `My name is Facundo Carbonel, I'm a Full-Stack JavaScript Developer and this is my web-portfolio`,
 	icons: {

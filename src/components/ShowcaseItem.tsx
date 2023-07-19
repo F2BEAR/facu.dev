@@ -4,7 +4,7 @@ interface Props {
 	title: string;
 	desc: string;
 	url: string;
-	type?: string;
+	type?: 'npm' | 'github';
 }
 
 export default function ShowcaseItem(props: Props) {
@@ -21,14 +21,21 @@ export default function ShowcaseItem(props: Props) {
 					{props.type === 'npm' ? (
 						<Image
 							src="/assets/svg/npm.svg"
-							alt="Profile Image"
+							alt="NPM Logo"
 							width={40}
 							height={40}
+						/>
+					) : props.type === 'github' ? (
+						<Image
+							src="/assets/svg/github.svg"
+							alt="Github Logo"
+							width={24}
+							height={24}
 						/>
 					) : (
 						<Image
 							src="/assets/svg/web.svg"
-							alt="Profile Image"
+							alt="Web SVG"
 							width={24}
 							height={24}
 						/>

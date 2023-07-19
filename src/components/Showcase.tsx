@@ -4,7 +4,7 @@ export default function Showcase() {
 	return (
 		<section className="mt-6 px-8">
 			<h1 className="text-3xl">Showcase</h1>
-			<div className="mt-3 flex w-full flex-wrap items-center justify-center gap-4">
+			<div className="mt-3 flex w-full flex-wrap items-center justify-start gap-4">
 				<ShowcaseItem
 					title="nSeed"
 					desc="A CLI Tool for database seeding with auto-generated data."
@@ -21,6 +21,12 @@ export default function Showcase() {
 					desc="A simple CLI for secure password generation."
 					url="https://www.npmjs.com/package/passwordy"
 					type="npm"
+				/>
+				<ShowcaseItem
+					title="Alertín"
+					desc="Discord Bot to get alerts from your server through HTTP."
+					url="https://github.com/F2BEAR/Alertin"
+					type="github"
 				/>
 				<ShowcaseItem
 					title="Dot-Logs"
