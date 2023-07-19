@@ -15,7 +15,7 @@ export default function Resumee() {
 							Take-off Media
 						</a>
 					</h1>
-					<p className="text-xs md:text-sm">Sept. 2021 / Prenset</p>
+					<p className="text-xs md:text-sm">Sept. 2021 / Present</p>
 				</div>
 				<div>
 					<h1 className="text-sm md:text-base">

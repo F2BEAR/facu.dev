@@ -1,0 +1,16 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - shell
+  script:
+    - docker buildx build --tag docker-nexus.stratus.services/f2bear/portfolio  --push .
+deploy:
+  stage: deploy
+  tags: 
+    - shell
+  script: 
+    - 'echo falso hay que ir a portainer'

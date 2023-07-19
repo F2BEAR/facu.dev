@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  portfolio:
+    image: docker-nexus.stratus.services/f2bear/portfolio
+    container_name: f2bear-portfolio
+    ports:
+      - "8667:3000"
+    restart: unless-stopped
