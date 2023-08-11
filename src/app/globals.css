@@ -1,18 +1,20 @@
 :root {
 	background-size: 60px 60px;
 	background-image: linear-gradient(
-		to right,
-		rgba(0, 224, 255, 0.19) 1px,
-		transparent 1px
-	),
-	linear-gradient(to bottom, rgba(0, 224, 255, 0.19) 1px, transparent 1px);
+			to right,
+			rgba(0, 224, 255, 0.19) 1px,
+			transparent 1px
+		),
+		linear-gradient(to bottom, rgba(0, 224, 255, 0.19) 1px, transparent 1px);
 	background-color: #0f0f23;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale; 
-	-webkit-text-size-adjust: 100%; 
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	animation: moveBackground 5s infinite linear;
 }
 
 ::-webkit-scrollbar {
@@ -25,7 +27,20 @@
 
 ::-webkit-scrollbar-thumb {
 	background: #00e1ffd3;
-	border-radius: 5rem; 
+	border-radius: 5rem;
+}
+
+@keyframes moveBackground {
+	0% {
+		background-position:
+			0 0,
+			0 0;
+	}
+	100% {
+		background-position:
+			60px 0,
+			0 60px;
+	}
 }
 
 @tailwind base;

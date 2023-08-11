@@ -1,7 +1,7 @@
 export default function Resumee() {
 	return (
 		<section className="mt-6 flex flex-col justify-between gap-4 md:flex-row">
-			<div className="flex flex-col gap-4 rounded-lg bg-black bg-opacity-80 p-8">
+			<div className="flex animate-fadeIn flex-col gap-4 rounded-lg bg-black bg-opacity-80 p-8">
 				<h1 className="text-lg text-cyan">Formal Experience</h1>
 				<div>
 					<h1 className="text-sm md:text-base">
@@ -60,7 +60,7 @@ export default function Resumee() {
 					<p className="text-xs md:text-sm">Jul. 2019 / Jan. 2020</p>
 				</div>
 			</div>
-			<div className="flex flex-col gap-4 rounded-lg bg-black bg-opacity-80 p-8">
+			<div className="flex animate-fadeIn flex-col gap-4 rounded-lg bg-black bg-opacity-80 p-8">
 				<h1 className="text-lg text-cyan">Skillset</h1>
 				<div className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-x-12 md:gap-y-4">
 					<div>

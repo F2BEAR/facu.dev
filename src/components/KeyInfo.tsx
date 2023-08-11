@@ -1,6 +1,6 @@
 export default function KeyInfo() {
 	return (
-		<section className="mt-6 flex flex-row gap-4 px-8">
+		<section className="mt-6 flex animate-fadeIn flex-row gap-4 px-8">
 			<div>
 				<h1 className="text-sm text-cyan md:text-xl">Languages</h1>
 				<p className="text-xs md:text-base">Spanish / English</p>

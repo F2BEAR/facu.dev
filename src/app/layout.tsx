@@ -3,7 +3,6 @@ import './globals.css';
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
 
 type Layout = {
 	children: ReactNode;
@@ -24,7 +23,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://facu.dev/"),
+	metadataBase: new URL('https://facu.dev/'),
 	title: 'Facundo Carbonel | Web Development',
 	description: `My name is Facundo Carbonel, I'm a Full-Stack JavaScript Developer and this is my web-portfolio`,
 	icons: {
@@ -82,8 +81,7 @@ export default function RootLayout({ children }: Layout) {
 			<body
 				className={`${roboto.variable} ${robotoMono.variable} flex flex-col items-center justify-center font-base text-white`}
 			>
-				<Header />
-				<main className="mx-8 md:m-0 lg:w-3/5">{children}</main>
+				<main className="mx-8 lg:m-0 lg:w-3/5">{children}</main>
 				<Footer />
 			</body>
 		</html>

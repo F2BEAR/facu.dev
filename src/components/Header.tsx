@@ -2,13 +2,13 @@ import Image from 'next/image';
 
 export default function Header() {
 	return (
-		<header className="mt-8 flex w-full flex-row items-center gap-4 px-8 md:mt-24 md:px-0 lg:w-3/5">
+		<header className="mt-8 flex w-full animate-fadeIn flex-row items-center gap-4 px-8 sm:w-3/5 md:px-0">
 			<Image
 				src="/assets/images/profile.jpg"
 				alt="Profile Image"
-				className="rounded-full"
-				width={148}
-				height={148}
+				className="h-24 w-24 rounded-full"
+				width={128}
+				height={128}
 			/>
 			<div className="flex w-full flex-col items-center justify-between gap-4 text-justify md:flex-row">
 				<div>
@@ -18,7 +18,7 @@ export default function Header() {
 					</h3>
 					<hr className="my-3 hidden md:block" />
 				</div>
-				<nav className="flex gap-4 w-full md:w-auto justify-around px-3">
+				<nav className="flex w-full justify-around gap-4 px-3 md:w-auto">
 					<a
 						href="https://github.com/F2BEAR"
 						target="_blank"

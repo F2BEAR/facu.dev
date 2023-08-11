@@ -2,9 +2,9 @@ import ShowcaseItem from './ShowcaseItem';
 
 export default function Showcase() {
 	return (
-		<section className="mt-6 px-8">
-			<h1 className="text-3xl">Showcase</h1>
-			<div className="mt-3 flex w-full flex-wrap items-center justify-start gap-2">
+		<section className="mt-6 text-center">
+			<h1 className="text-3xl px-8">Showcase</h1>
+			<div className="mt-3 flex w-full flex-wrap items-center justify-center gap-2">
 				<ShowcaseItem
 					title="nSeed"
 					desc="A CLI Tool for database seeding with auto-generated data."
@@ -44,6 +44,11 @@ export default function Showcase() {
 					desc="Fully typed NodeJS Syslog Server for ESM, CJS and Typescript."
 					url="https://www.npmjs.com/package/ts-syslog"
 					type="npm"
+				/>
+				<ShowcaseItem
+					title="agust.sh"
+					desc="A web portfolio, showcasing a Agustnín's great skills and creativity."
+					url="https://agust.sh"
 				/>
 			</div>
 		</section>
