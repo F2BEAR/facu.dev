@@ -1,0 +1,29 @@
+import type { MetadataRoute } from "next";
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: "Facundo Carbonel | Web Dev",
+    short_name: "Facu.Dev",
+    description: `I'm a Full-Stack TypeScript Developer and this is my web portfolio!`,
+    icons: [
+      {
+        src: "favicon.ico",
+        sizes: "64x64 32x32 24x24 16x16",
+        type: "image/x-icon",
+      },
+      {
+        src: "assets/images/logo192.png",
+        type: "image/png",
+        sizes: "192x192",
+      },
+      {
+        src: "assets/images/logo512.png",
+        type: "image/png",
+        sizes: "512x512",
+      },
+    ],
+    start_url: "https://facu.dev",
+    display: "standalone",
+    background_color: "#2d3748",
+  };
+}
