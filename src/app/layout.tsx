@@ -88,8 +88,8 @@ export default function RootLayout({ children }: Layout) {
         <main className="mx-8 lg:m-0 lg:w-3/5">{children}</main>
         <Footer />
         <Analytics mode="production" />
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID ?? ""} />
       </body>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID ?? ""} />
     </html>
   );
 }
