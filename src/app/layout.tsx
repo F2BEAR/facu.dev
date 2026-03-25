@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import Footer from "../components/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 type Layout = {
   children: ReactNode;
@@ -87,6 +88,7 @@ export default function RootLayout({ children }: Layout) {
         <main className="mx-8 lg:m-0 lg:w-3/5">{children}</main>
         <Footer />
         <Analytics mode="production" />
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID ?? ""} />
       </body>
     </html>
   );
