@@ -11,16 +11,14 @@ export default function Download() {
   };
 
   return (
-    <section className="mt-8 flex w-full animate-fadeIn flex-row items-center justify-center text-center">
-      <a
-        href="./Resume Facundo Carbonel.pdf"
-        download="Facundo-Carbonel-CV"
-        className="rounded-3xl bg-cyan py-4 px-16 font-mono text-lg text-slate-800 hover:drop-shadow-sm"
-        data-gtm-event="cv_download"
-        onClick={handleClick}
-      >
-        Download my CV
-      </a>
-    </section>
+    <a
+      href="./Resume Facundo Carbonel.pdf"
+      download="Facundo-Carbonel-CV"
+      className="rounded-3xl border text-gray-200 border-cyan py-4 px-8 md:px-16 font-bold text-center text-lg uppercase hover:bg-white/5"
+      data-gtm-event="cv_download"
+      onClick={handleClick}
+    >
+      Download resume
+    </a>
   );
 }

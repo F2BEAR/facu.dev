@@ -1,99 +1,119 @@
 export default function Resumee() {
   return (
-    <section className="mt-6 flex flex-col justify-between gap-4 md:flex-row">
-      <div className="flex animate-fadeIn flex-col gap-4 rounded-lg bg-black bg-opacity-80 p-8">
-        <h1 className="text-lg text-cyan">Formal Experience</h1>
-        <div>
-          <h1 className="text-sm md:text-base">
-            Web Developer at{" "}
-            <a
-              href="https://www.takeoffmedia.com"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-cyan"
-            >
-              Take-off Media
-            </a>
-          </h1>
-          <p className="text-xs md:text-sm">Sept. 2021 / Feb. 2026</p>
-        </div>
-        <div>
-          <h1 className="text-sm md:text-base">
-            Application Support level 2 and 3 at{" "}
-            <a
-              href="https://www.tcs.com"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-cyan"
-            >
+    <section
+      className="mt-8 flex lg:w-5xl w-full flex-col justify-around animate-fadeIn gap-8 lg:flex-row lg:rounded-lg bg-[#10131a] p-8"
+      id="experience"
+    >
+      <div>
+        <h3 className="text-2xl font-bold uppercase tracking-widest mb-8 flex items-center gap-4">
+          <span className="w-8 h-px bg-cyan"></span> Experience
+        </h3>
+        <div className="space-y-8 relative ml-4 pl-13">
+          <div className="absolute left-[3.5px] top-2 bottom-2 w-px bg-linear-to-b from-cyan via-outline-variant to-transparent"></div>
+          <div className="relative">
+            <div className="absolute -left-13.5 w-2.5 h-2.5 bg-cyan rounded-full shadow-[0_0_10px_#00fbfb]"></div>
+            <span className="text-[10px] font-headline font-bold text-cyan tracking-widest uppercase align-text-top">
+              Sept. 2021 / Feb. 2026
+            </span>
+            <h4 className="text-xl font-bold mt-2">Full-Stack Web Developer</h4>
+            <p className="font-medium text-gray-200">Take-off Media</p>
+          </div>
+          <div className="relative">
+            <div className="absolute -left-13.5 top-1 w-2.5 h-2.5 bg-white rounded-full"></div>
+            <span className="text-[10px] font-bold text-gray-200 tracking-widest uppercase align-text-top">
+              Feb. 2021 / Sept. 2021{" "}
+            </span>
+            <h4 className="text-xl font-bold mt-2">
+              Application Support level 2 and 3
+            </h4>
+            <p className="text-gray-200 font-medium">
               Tata Consultancy Services
-            </a>
-          </h1>
-          <p className="text-xs md:text-sm">Feb. 2021 / Sept. 2021</p>
-        </div>
-        <div>
-          <h1 className="text-sm md:text-base">
-            Quality Assurance Tester (UAT) at{" "}
-            <a
-              href="https://www.tcs.com"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-cyan"
-            >
+            </p>
+          </div>
+          <div className="relative">
+            <div className="absolute -left-13.5 top-1 w-2.5 h-2.5 bg-white/60 rounded-full"></div>
+            <span className="text-[10px] font-bold text-gray-200 tracking-widest uppercase align-text-top">
+              Jan. 2020 / Feb. 2021{" "}
+            </span>
+            <h4 className="text-xl font-bold mt-2">
+              Quality Assurance Tester (UAT)
+            </h4>
+            <p className="text-gray-200 font-medium">
               Tata Consultancy Services
-            </a>
-          </h1>
-          <p className="text-xs md:text-sm">Jan. 2020 / Feb. 2021</p>
-        </div>
-        <div>
-          <h1 className="text-sm md:text-base">
-            Junior IT Technician at{" "}
-            <a
-              href="https://www.tcs.com"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-cyan"
-            >
-              Tata Consultancy Services
-            </a>
-          </h1>
-          <p className="text-xs md:text-sm">Jul. 2019 / Jan. 2020</p>
+            </p>
+          </div>
         </div>
       </div>
-      <div className="flex animate-fadeIn flex-col gap-4 rounded-lg bg-black bg-opacity-80 p-8">
-        <h1 className="text-lg text-cyan">Skillset</h1>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-x-12 md:gap-y-4">
+      <div id="skills">
+        <h3 className="text-2xl font-bold uppercase tracking-widest mb-8 flex items-center gap-4">
+          <span className="w-8 h-px bg-cyan"></span> Skillset
+        </h3>
+        <div className="space-y-8">
           <div>
-            <h1 className="font-bold">Front-end</h1>
-            <ul className="text-sm md:text-base">
-              <li className="text-sm">React</li>
-              <li className="text-sm">Next.js - Vite</li>
-              <li className="text-sm">TailwindCSS</li>
-            </ul>
+            <h4 className="text-[10px] font-headline font-bold text-on-surface-variant tracking-[0.2em] uppercase mb-4">
+              Front-end
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                React.js
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                Next.js
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                Tailwind CSS
+              </span>
+            </div>
           </div>
           <div>
-            <h1 className="font-bold">Back-end</h1>
-            <ul className="text-sm md:text-base">
-              <li className="text-sm">Node.js</li>
-              <li className="text-sm">Express</li>
-              <li className="text-sm">PostgreSQL</li>
-              <li className="text-sm">MongoDb</li>
-            </ul>
+            <h4 className="text-[10px] font-headline font-bold text-on-surface-variant tracking-[0.2em] uppercase mb-4">
+              Back-end
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                Node.js
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                Deno
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                Express
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                PostgreSQL
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                MongoDB
+              </span>
+            </div>
           </div>
           <div>
-            <h1 className="font-bold">Tools</h1>
-            <ul className="text-sm md:text-base">
-              <li className="text-sm">Git</li>
-              <li className="text-sm">TypeScript</li>
-              <li className="text-sm">Docker - Kubernetes</li>
-            </ul>
-          </div>
-          <div>
-            <h1 className="font-bold">CI/CD</h1>
-            <ul className="text-sm md:text-base">
-              <li className="text-sm">GitHub Actions</li>
-              <li className="text-sm">GitLab CI</li>
-            </ul>
+            <h4 className="text-[10px] font-headline font-bold text-on-surface-variant tracking-[0.2em] uppercase mb-4">
+              Tools &amp; CI/CD
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                TypeScript
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                Jest
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                Docker
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                GitHub Actions
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                AWS
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                Kubernetes
+              </span>
+              <span className="px-3 py-1 bg-[#32353c] rounded-full text-xs font-medium border border-outline-variant/10">
+                GIT
+              </span>
+            </div>
           </div>
         </div>
       </div>

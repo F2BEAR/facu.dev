@@ -1,61 +1,70 @@
-:root {
-	background-size: 60px 60px;
-	background-image: linear-gradient(
-			to right,
-			rgba(0, 224, 255, 0.19) 1px,
-			transparent 1px
-		),
-		linear-gradient(to bottom, rgba(0, 224, 255, 0.19) 1px, transparent 1px);
-	background-color: #0f0f23;
+.hero {
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, rgba(0, 224, 255, 0.19) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 224, 255, 0.19) 1px, transparent 1px);
+  background-color: #0f0f23;
 
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 
-	animation: moveBackground 5s infinite linear;
+  animation: moveBackground 5s infinite linear;
+}
+
+.blueprint-grid {
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(131, 148, 147, 0.05) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
 }
 
 ::-webkit-scrollbar {
-	width: 15px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #0f0f23;
+  background: #0f0f23;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #00e1ffd3;
-	border-radius: 5rem;
+  background: #00e1ffd3;
+  border-radius: 5rem;
 }
 
 @keyframes moveBackground {
-	0% {
-		background-position:
-			0 0,
-			0 0;
-	}
-	100% {
-		background-position:
-			60px 0,
-			0 60px;
-	}
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      60px 0,
+      0 60px;
+  }
 }
 
 @import "tailwindcss";
 
 @theme {
-  --color-black: #01000D;
-  --color-white: #DDDDDD;
-  --color-cyan: #00E0FF;
+  --color-black: #01000d;
+  --color-white: #dddddd;
+  --color-cyan: #00e0ff;
   --font-base: var(--base-font);
   --font-mono: var(--mono-font);
   --drop-shadow-sm: 0 0 0.5rem rgb(0, 224, 255);
   --animate-fadeIn: fadeIn 1.5s ease-in-out forwards;
   @keyframes fadeIn {
-    -1% { opacity: 0; }
-    99% { opacity: 1; }
+    -1% {
+      opacity: 0;
+    }
+    99% {
+      opacity: 1;
+    }
   }
 }
-

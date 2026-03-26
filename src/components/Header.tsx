@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -19,7 +20,7 @@ export default function Header() {
           <hr className="my-3 hidden md:block" />
         </div>
         <nav className="flex w-full justify-around gap-4 px-3 md:w-auto">
-          <a
+          <Link
             href="https://github.com/F2BEAR"
             target="_blank"
             rel="noopener noreferrer"
@@ -31,8 +32,8 @@ export default function Header() {
               width={24}
               height={24}
             />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.linkedin.com/in/facundo-carbonel/"
             target="_blank"
             rel="noopener noreferrer"
@@ -44,15 +45,18 @@ export default function Header() {
               width={24}
               height={24}
             />
-          </a>
-          <a href="mailto:contacto@facu.dev" className="hover:drop-shadow-sm">
+          </Link>
+          <Link
+            href="mailto:contacto@facu.dev"
+            className="hover:drop-shadow-sm"
+          >
             <Image
               src="/assets/svg/email.svg"
               alt="email"
               width={24}
               height={24}
             />
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

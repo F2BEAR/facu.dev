@@ -1,27 +1,21 @@
-import { Roboto, Roboto_Mono } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import Footer from "../components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Toaster } from "sonner";
 
 type Layout = {
   children: ReactNode;
 };
 
-const roboto = Roboto({
+const spaceGrotesk = Space_Grotesk({
   weight: ["400", "700"],
   display: "swap",
   subsets: ["latin"],
   variable: "--base-font",
-});
-
-const robotoMono = Roboto_Mono({
-  weight: ["400", "700"],
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--mono-font",
 });
 
 export const metadata: Metadata = {
@@ -83,11 +77,12 @@ export default function RootLayout({ children }: Layout) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${robotoMono.variable} flex flex-col items-center justify-center font-base text-white`}
+        className={`${spaceGrotesk.variable} flex flex-col items-center justify-center font-base text-white`}
       >
-        <main className="mx-8 lg:m-0 lg:w-3/5">{children}</main>
+        <main className="bg-[#10131a] w-full blueprint-grid">{children}</main>
         <Footer />
         <Analytics mode="production" />
+        <Toaster />
       </body>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID ?? ""} />
     </html>
