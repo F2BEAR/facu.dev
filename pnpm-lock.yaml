@@ -11,6 +11,9 @@ dependencies:
   '@conform-to/zod':
     specifier: ^1.17.1
     version: 1.17.1(zod@4.3.6)
+  '@marsidev/react-turnstile':
+    specifier: ^1.4.2
+    version: 1.4.2(react-dom@19.2.0)(react@19.2.0)
   '@next/third-parties':
     specifier: ^16.2.1
     version: 16.2.1(next@16.2.0)(react@19.2.0)
@@ -593,6 +596,16 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  /@marsidev/react-turnstile@1.4.2(react-dom@19.2.0)(react@19.2.0):
+    resolution: {integrity: sha512-xs1qOuyeMOz6t9BXXCXWiukC0/0+48vR08B7uwNdG05wCMnbcNgxiFmdFKDOFbM76qFYFRYlGeRfhfq1U/iZmA==}
+    peerDependencies:
+      react: ^17.0.2 || ^18.0.0 || ^19.0
+      react-dom: ^17.0.2 || ^18.0.0 || ^19.0
+    dependencies:
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+    dev: false
 
   /@napi-rs/wasm-runtime@0.2.12:
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}

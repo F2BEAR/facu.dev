@@ -11,6 +11,7 @@
   "dependencies": {
     "@conform-to/react": "^1.17.1",
     "@conform-to/zod": "^1.17.1",
+    "@marsidev/react-turnstile": "^1.4.2",
     "@next/third-parties": "^16.2.1",
     "@vercel/analytics": "^2.0.1",
     "next": "^16.2.0",
