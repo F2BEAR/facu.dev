@@ -48,7 +48,7 @@ export default function ContactForm({
   toggle: Dispatch<SetStateAction<boolean>>;
 }) {
   const [lastResult, action] = useActionState(submit, undefined);
-  const [form, { email, name, company, message }] = useForm({
+  const [form, { email, name, company, message, website }] = useForm({
     lastResult: lastResult?.result,
     onValidate({ formData }) {
       return parseWithZod(formData, {
@@ -178,6 +178,12 @@ export default function ContactForm({
               <p className="text-red-500 text-xs mt-1">{message.errors}</p>
             </div>
           </section>
+          <input
+            className="hidden"
+            key={website.key}
+            name={website.name}
+            placeholder="example.com"
+          />
 
           <SubmitButton />
         </Form>

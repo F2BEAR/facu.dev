@@ -20,6 +20,7 @@ const schema = z.object({
       .min(10, "Message is too short.")
       .max(500, "Message is too long."),
   ),
+  website: z.string().nullable().optional(),
 });
 
 export default schema;

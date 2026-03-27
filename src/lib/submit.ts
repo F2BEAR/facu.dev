@@ -4,6 +4,7 @@ import { Resend } from "resend";
 import { parseWithZod } from "@conform-to/zod/v4";
 import type { SubmissionResult } from "@conform-to/react";
 import schema from "./schema";
+import isSpam from "./honeyPot";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -19,6 +20,11 @@ export async function submit(
 
   if (submission.status !== "success") {
     return { status: "error" as const, result: submission.reply() };
+  }
+
+  if (isSpam(submission.value)) {
+    console.warn("They took the honey, it's a spam");
+    return { status: "success" as const, result: submission.reply() };
   }
 
   const { email, name, company, message } = submission.value;
