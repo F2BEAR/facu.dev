@@ -5,9 +5,16 @@ import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod/v4";
 import { useFormStatus } from "react-dom";
 import { toast } from "sonner";
+import {
+  Dispatch,
+  SetStateAction,
+  useActionState,
+  useEffect,
+  useState,
+} from "react";
+import TurnstileWidget from "./TurnstileWidget";
 import { submit } from "../lib/submit";
 import schema from "../lib/schema";
-import { Dispatch, SetStateAction, useActionState, useEffect } from "react";
 
 function Spinner() {
   return (
@@ -48,6 +55,8 @@ export default function ContactForm({
   toggle: Dispatch<SetStateAction<boolean>>;
 }) {
   const [lastResult, action] = useActionState(submit, undefined);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+
   const [form, { email, name, company, message, website }] = useForm({
     lastResult: lastResult?.result,
     onValidate({ formData }) {
@@ -178,6 +187,14 @@ export default function ContactForm({
               <p className="text-red-500 text-xs mt-1">{message.errors}</p>
             </div>
           </section>
+
+          <input
+            type="hidden"
+            name="turnstileToken"
+            value={turnstileToken ?? ""}
+          />
+          <TurnstileWidget onSuccess={setTurnstileToken} />
+
           <input
             className="hidden"
             key={website.key}

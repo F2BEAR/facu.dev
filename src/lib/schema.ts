@@ -20,6 +20,7 @@ const schema = z.object({
       .min(10, "Message is too short.")
       .max(500, "Message is too long."),
   ),
+  turnstileToken: z.string({ error: "Turnstile token is required." }),
   website: z.string().nullable().optional(),
 });
 
