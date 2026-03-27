@@ -3,6 +3,8 @@
 import { Resend } from "resend";
 import { parseWithZod } from "@conform-to/zod/v4";
 import type { SubmissionResult } from "@conform-to/react";
+import { headers } from "next/headers";
+import ratelimit from "./ratelimit";
 import schema from "./schema";
 import isSpam from "./honeyPot";
 import VerifyTurnstileToken from "./verifyTurnstileToken";
@@ -21,6 +23,13 @@ export async function submit(
 
   if (submission.status !== "success") {
     return { status: "error" as const, result: submission.reply() };
+  }
+
+  const ip = (await headers()).get("x-forwarded-for") ?? "anonymous";
+  const { success } = await ratelimit.limit(ip);
+
+  if (!success) {
+    return { status: "error", result: submission.reply() };
   }
 
   if (isSpam(submission.value)) {
