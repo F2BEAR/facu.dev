@@ -38,7 +38,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <button
-      className="rounded-3xl bg-cyan py-4 px-8 md:px-16 font-bold text-lg uppercase text-slate-800 hover:drop-shadow-sm"
+      className="rounded-3xl bg-cyan py-4 px-8 md:px-16 font-bold text-lg uppercase flex justify-center text-slate-800 hover:drop-shadow-sm"
       type="submit"
       disabled={pending}
     >
